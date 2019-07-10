@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+// 布局函数
+@mixin flex($direction:column,$inline:block){
+  display:if($inline==block,flex,inline-flex);
+  flex-direction: $direction;
+  flex-wrap:wrap;
+}
+
+// 通用模块组件样式
+@mixin panel($color:#ab956d,$padding:20px 0){
+    width:100%;
+    .title {
+      font-size: 32px;
+      text-align: center;
+      color: $color;
+      background: #fff;
+      padding: $padding;
+    }
+}
